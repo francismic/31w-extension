@@ -13,19 +13,19 @@
  * 
  */
 
-function genere_html(){
+function boite_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
     $contenu = 
-    "<div class='boite'>"
-    . "<code>-----Auteur: " . get_the_author() . "</code>"
-    . "<date>-----Date de publication: " . get_the_date() . "</date>"
-    . "<code>-----Adresse URL" . get_the_guid() . "</code>"
-    . '</div> <!-- fin class="boite" -->';
+    "<section class='carrousel'>"
+    .'<button class = "carrousel--fermer">X<button>'
+    .'<figure class="carrousel__figure"></figure>'
+    .'<form class="carrousel__form"></form>'
+    . '</section> <!-- fin class="carrousel" -->';
     
     return $contenu;
    }
-   add_shortcode('fm_carrousel', 'genere_html');
+   add_shortcode('fm_carrousel', 'boite_carrousel');
 
 
 ?>
