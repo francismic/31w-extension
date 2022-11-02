@@ -40,7 +40,7 @@ wp_enqueue_script("fm_carrousel", plugin_dir_url( __FILE__) . "js/carrousel.js",
 add_action("wp_enqueue_scripts","fm_enqueue");
 
 
-function boite_carrousel(){
+function fm_boite_carrousel(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
     $contenu = 
@@ -56,7 +56,7 @@ function boite_carrousel(){
         
         return $contenu;
    }
-   add_shortcode('fm_carrousel', 'boite_carrousel');
+   add_shortcode('fm_carrousel', 'fm_boite_carrousel');
 
 
 ?>
